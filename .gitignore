@@ -1,0 +1,8 @@
+/build*/
+/out/
+/.cache/
+/.idea/
+/.vscode/
+.DS_Store
+compile_commands.json
+
