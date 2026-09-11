@@ -34,9 +34,15 @@ if(BUILD_TESTING)
         src/strategy/imbalance_strategy.cpp
     )
 
+    add_executable(itch-parser-tests
+        tests/market_data/test_parser.cpp
+        src/market_data/itch/parser.cpp
+    )
+
     target_include_directories(order-book-tests PRIVATE src)
     target_include_directories(imbalance-strategy-tests PRIVATE src)
     target_include_directories(trading-engine-tests PRIVATE src)
+    target_include_directories(itch-parser-tests PRIVATE src)
 
     add_test(
         NAME order-book-tests
@@ -51,5 +57,10 @@ if(BUILD_TESTING)
     add_test(
         NAME trading-engine-tests
         COMMAND trading-engine-tests
+    )
+
+    add_test(
+        NAME itch-parser-tests
+        COMMAND itch-parser-tests
     )
 endif()
