@@ -5,7 +5,7 @@
 
 using Price = std::uint64_t;
 using StockLocate = std::uint64_t;
-using Quantity = std::uint64_t;
+using Quantity = std::uint32_t;
 using Timestamp = std::uint64_t;
 using OrderReferenceNumber = std::uint64_t;
 using MPID = std::string;
